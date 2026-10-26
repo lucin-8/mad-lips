@@ -3,10 +3,21 @@ import random
 
 print ("welcome to mad libs game!")
 print ("choose from the following templates to create your story:")
-print ("1.")
-print ("2.")
-print ("3.")
-subject = input("Please enter the number of your chosen template: ")
+templates = ["1", "2", "3"]
+valid_choices = ["1", "2", "3", "4"]
+
+def print_templates():
+
+    print("1. Hospital Story")
+    print("2. Camping Story")
+    print("3. Enchanted Forest Story")
+    print("4. Random Template")
+print_templates()
+subject = input("Enter 1, 2, 3, or 4: ")
+if subject == "4":
+
+    subject = random.choice(templates)
+    print(f"Randomly selected template: {subject}")
 if subject == "1":
     print ("Please enter the following words to create your story:")
     num1 = input("Enter an Number: ") 
